@@ -1,1 +1,190 @@
+/* ------------------------------
+   1) COLOR SYSTEM (Variables)
+------------------------------ */
+:root {
+    --color-primary: #B8A3D3;      /* Soft Lilac */
+    --color-secondary: #A8E6CF;    /* Mint Green */
+    --color-bg: #FAF9F7;           /* Warm White */
+    --color-grey: #E7E7E7;         /* Light Grey */
+    --color-text: #3A3A3C;         /* Charcoal */
+    --color-accent-1: #F9D7C2;     /* Soft Peach */
+    --color-accent-2: #E6D8B9;     /* Gold Beige */
+}
+
+/* ------------------------------
+   2) GLOBAL RESET
+------------------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: "Inter", sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+/* ------------------------------
+   3) GLOBAL ELEMENTS
+------------------------------ */
+a {
+    color: var(--color-text);
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+a:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ------------------------------
+   4) LAYOUT CONTAINERS
+------------------------------ */
+.container {
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background: white;
+}
+
+.section-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 64px 20px;
+}
+
+.card {
+    background: white;
+    border: 1px solid var(--color-secondary);
+    border-radius: 14px;
+    padding: 24px;
+}
+
+/* ------------------------------
+   5) HEADER
+------------------------------ */
+header {
+    background-color: var(--color-bg);
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--color-grey);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 42px;
+}
+
+.site-name {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+/* NAVIGATION */
+nav ul {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+}
+
+nav a {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 6px 0;
+}
+
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* ------------------------------
+   6) RESPONSIVE NAVIGATION
+------------------------------ */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background: white;
+        padding: 20px;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        width: 200px;
+        border: 1px solid var(--color-grey);
+        border-radius: 10px;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* ------------------------------
+   7) FOOTER
+------------------------------ */
+footer {
+    background-color: var(--color-secondary);
+    padding: 40px 20px;
+    color: var(--color-text);
+}
+
+footer h4 {
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+footer a {
+    color: var(--color-text);
+}
+
+footer a:hover {
+    color: var(--color-primary);
+}
+
+footer .footer-bottom {
+    margin-top: 24px;
+    font-size: 14px;
+    opacity: 0.8;
+    text-align: center;
+}
 
