@@ -1,12 +1,12 @@
 // إدخال الهيدر
-fetch('/includes/header.html')
+fetch('includes/header.html')
     .then(response => response.text())
     .then(data => {
         document.querySelector('header').innerHTML = data;
     });
 
 // إدخال الفوتر
-fetch('/includes/footer.html')
+fetch('includes/footer.html')
     .then(response => response.text())
     .then(data => {
         document.querySelector('footer').innerHTML = data;
@@ -23,4 +23,3 @@ document.addEventListener('click', () => {
         });
     }
 });
-
